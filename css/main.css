@@ -180,3 +180,7 @@ li {
 .listing-item time {
   color: #999999;
 }
+
+#home h1 {
+  border-bottom: 1px solid #cccccc;
+}
