@@ -29,3 +29,65 @@ Type=Application
 Categories=GNOME;Application;Development;
 StartupNotify=true
 {% endhighlight %}
+
+Skype Chinese
+
+{% highlight ruby %}
+sudo apt-get install ttf-wqy-microhei
+sudo vim /etc/fonts/conf.d/69-language-selector-zh-cn.conf
+{% endhighlight %}
+
+{% highlight xml %}
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+   <match target="pattern">
+      <test qual="any" name="family">
+         <string>serif</string>
+      </test>
+      <edit name="family" mode="prepend" binding="strong">
+         <string>WenQuanYi Micro Hei</string>
+         <string>AR PL UMing CN</string>
+         <string>AR PL ShanHeiSun Uni</string>
+         <string>WenQuanYi Bitmap Song</string>
+         <string>Bitstream Vera Serif</string>
+         <string>DejaVu Serif</string>
+         <string>AR PL UKai CN</string>
+         <string>AR PL ZenKai Uni</string>
+      </edit>
+   </match> 
+   <match target="pattern">
+      <test qual="any" name="family">
+         <string>sans-serif</string>
+      </test>
+      <edit name="family" mode="prepend" binding="strong">
+         <string>WenQuanYi Micro Hei</string>
+         <string>Bitstream Vera Sans</string>
+         <string>DejaVu Sans</string>
+         <string>WenQuanYi Zen Hei</string>
+         <string>AR PL UMing CN</string>
+         <string>AR PL ShanHeiSun Uni</string>
+         <string>WenQuanYi Bitmap Song</string>
+         <string>AR PL UKai CN</string>
+         <string>AR PL ZenKai Uni</string>
+      </edit>
+   </match> 
+   <match target="pattern">
+      <test qual="any" name="family">
+         <string>monospace</string>
+      </test>
+      <edit name="family" mode="prepend" binding="strong">
+         <string>WenQuanYi Micro Hei Mono</string>
+         <string>Bitstream Vera Sans Mono</string>
+         <string>DejaVu Sans Mono</string>
+         <string>WenQuanYi Zen Hei</string>
+         <string>AR PL UMing CN</string>
+         <string>AR PL ShanHeiSun Uni</string>
+         <string>WenQuanYi Bitmap Song</string>
+         <string>AR PL UKai CN</string>
+         <string>AR PL ZenKai Uni</string>
+      </edit>
+   </match> 
+</fontconfig>
+{% endhighlight %}
+
