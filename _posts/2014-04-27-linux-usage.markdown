@@ -93,5 +93,5 @@ sudo vim /etc/fonts/conf.d/69-language-selector-zh-cn.conf
 
 查看自己的外部ip
 {% highlight ruby %}
-ifconfig.me
+curl ifconfig.me
 {% endhighlight %}
