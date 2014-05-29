@@ -69,3 +69,11 @@ tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
 {% highlight ruby %}
  ./gradlew assembleRelease
 {% endhighlight %}
+
+
+#Gradle Tasks
+{% highlight ruby %}
+cd myproject/
+gradle <taskName1> [<taskName2>...]
+gradle tasks [--all]
+{% endhighlight %}
