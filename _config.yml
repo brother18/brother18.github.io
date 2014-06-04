@@ -1,3 +1,4 @@
 name: Arthur's blog
 markdown: redcarpet
 pygments: true
+excerpt_separator: ""
