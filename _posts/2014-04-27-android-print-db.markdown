@@ -49,8 +49,8 @@ def get_columns_rows(conn, tab):
 
 def print_cell(out, id, i, cell):
   if not cell is None:
-    tmp = "%s"%(cell)
-    out.write(tmp);
+    cell = "%s"%(cell)
+    out.write(cgi.escape(cell))
 
 FUNCTIONS = {}
 
