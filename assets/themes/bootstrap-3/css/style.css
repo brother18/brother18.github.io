@@ -15,7 +15,7 @@
 
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4 {
-  color: #f22430;
+  color: #000000;
 }
 #footer {
   background-color: #fdcd60;
@@ -77,3 +77,49 @@ h1, h2, h3, h4 {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+html, body {
+background-color: #eee;
+}
+.container {
+width: 1170px;
+background-color: #ffffff;
+}
+.navbar-default {
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+}
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  padding-left: 400px;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.navbar-brand, .navbar-nav>li>a {
+ text-shadow: 0 0px 0 rgba(255,255,255,0.25); 
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #bfbfbf;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+#footer {
+  background-color: #ffffff;
+}
+#footer p {
+  line-height: 30px;
+  margin-bottom: 0px;
+  color: #000000;
+}
