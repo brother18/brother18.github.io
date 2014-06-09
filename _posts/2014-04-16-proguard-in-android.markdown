@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android代码混淆以及在Android Studio中的应用"
+title:  "Android代码混淆"
 date:   2014-04-16 15:17:43
 categories:  Android
 ---
@@ -60,13 +60,10 @@ umeng统计
 }
 {% endhighlight %}
 
-#4.在Android Studio中的配置
-修改build.gradle修改如下
+
+EventBus
 {% highlight ruby %}
-buildTypes {
-    release {
-        runProguard true
-        proguardFile file('proguard-project.txt')
-    }
+-keepclassmembers class ** {
+    public void onEvent*(**);
 }
 {% endhighlight %}
