@@ -50,6 +50,12 @@ categories:  Android
 {% highlight ruby %}
 -keep class com.cvte.irremote.*Fragment
 {% endhighlight %}
+
+忽略某个包
+{% highlight ruby %}
+-keep public class com.cvte.weather.models.**
+{% endhighlight %}
+
 #3.其他常用混淆方式
 umeng统计
 {% highlight ruby %}
@@ -60,10 +66,37 @@ umeng统计
 }
 {% endhighlight %}
 
-
 EventBus
 {% highlight ruby %}
 -keepclassmembers class ** {
     public void onEvent*(**);
 }
+{% endhighlight %}
+
+gson
+{% highlight ruby %}
+##---------------Begin: proguard configuration for Gson  ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+-keep class com.google.gson.examples.android.model.** { *; }
+
+##---------------End: proguard configuration for Gson  ----------
+{% endhighlight %}
+
+GreenDao
+{% highlight ruby %}
+-keepclassmembers class * extends de.greenrobot.dao.AbstractDao {
+    public static java.lang.String TABLENAME;
+}
+-keep class **$Properties
 {% endhighlight %}
