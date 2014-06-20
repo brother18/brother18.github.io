@@ -9,22 +9,17 @@ categories:  Gradle
 #1.自动签名
 {% highlight ruby %}
 signingConfigs {
-    debug {
-        storeFile file("keystore/debug.keystore")
-    }
-    myConfig {
-        storeFile file('keystore/cvte-android.keystore')
-        storePassword 'blablabla'
-        keyAlias 'cvte-android.keystore'
-        keyPassword 'blablabla'
+    releaseConfig {
+        storeFile file("/path/to/your/keystore")
+        storePassword ('blabla')
+        keyAlias 'blabla'
+        keyPassword 'blabla'
     }
 }
-{% endhighlight %}
 
-{% highlight ruby %}
 buildTypes {
     release {
-        signingConfig signingConfigs.myConfig
+        signingConfig signingConfigs.releaseConfig
     }
 }
 {% endhighlight %}

@@ -5,6 +5,14 @@ date:   2014-06-04 21:29:43
 categories:  Gradle
 ---
 
+在新建的目录下输入
+gradle tasks
+可以看出当前的task有哪些
+
+Gradle buildTypes
+可以指定如下信息：
+* signingConfig
+* debuggable
 
 在工程目录下新建build.gradle
 {% highlight ruby %}
