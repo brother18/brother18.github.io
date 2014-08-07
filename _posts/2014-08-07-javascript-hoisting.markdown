@@ -6,7 +6,7 @@ categories: javascript
 ---
 
 ###含义   
-Hoisting 指的是把所有声明移到当前script的顶部或者当前函数的顶部
+Hoisting 指的是把所有声明移到当前script的顶部或者当前函数的顶部   
 Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
 
 ***
@@ -26,7 +26,7 @@ var x; // Declare x
 
 ###JavaScript Initializations are Not Hoisted
 
-javascript只移动声明不移动初始化
+javascript只移动声明不移动初始化   
 JavaScript only hoists declarations, not initializations.
 
 {% highlight javascript %}
@@ -43,4 +43,5 @@ var y = 7; // Initialize y
 ***
 
 所以遵循   
+
 ### Declare Your Variables At the Top !
