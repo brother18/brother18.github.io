@@ -26,8 +26,7 @@ var x; // Declare x
 
 ###JavaScript Initializations are Not Hoisted
 
-javascript只移动声明不移动初始化   
-JavaScript only hoists declarations, not initializations.
+javascript只移动声明不移动初始化，也不移动赋值语句   
 
 {% highlight javascript %}
 
@@ -41,6 +40,33 @@ var y = 7; // Initialize y
 将输出5 undefined
 
 ***
+
+另外一个经典的例子：
+
+{% highlight javascript %}
+var a = 123;
+function f() {
+    console.log(a);
+    var a = 1;
+    console.log(a);
+}
+f();
+等价于
+var a = 123;
+function f() {
+    var a;
+    console.log(a);
+    a = 1;
+    console.log(a);
+}
+f();
+{% endhighlight %}
+
+所以会输出
+{% highlight javascript %}
+undefined
+1
+{% endhighlight %}
 
 所以遵循   
 
