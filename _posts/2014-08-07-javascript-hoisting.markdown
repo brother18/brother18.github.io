@@ -43,4 +43,4 @@ var y = 7; // Initialize y
 ***
 
 所以遵循   
-###Declare Your Variables At the Top !
+### Declare Your Variables At the Top !
